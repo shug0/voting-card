@@ -11,7 +11,7 @@ function App() {
         className="bg-black text-white text-xl font-bold uppercase flex h-full justify-center items-center flex-1"
         onClick={() => setVoteCount(count)}
       >
-        {count} vote{voteCount > 1 ? "s" : ""}
+        {count}
       </button>
     );
   }
@@ -21,8 +21,8 @@ function App() {
   };
 
   return (
-    <main className="w-screen h-screen flex flex-col bg-black p-8">
-      <div className="h-full w-full flex gap-8">
+    <main className="w-screen h-screen flex flex-col bg-black p-8 pb-2">
+      <div className="h-full w-full flex flex-col gap-8">
         {new Array(voteCount).fill(null).map((_, index) => (
           <VotingCard key={index} />
         ))}
